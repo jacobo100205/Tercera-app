@@ -5,7 +5,7 @@ import streamlit as st
 
 st.title("Esto es una app") 
 
-year = st.slelectbox("Seleccione un año",[2024,2023,2022])
+year = st.selectbox("Seleccione un año",[2024,2023,2022])
 
 if year == 2024:
     df_m = gpd.read_parquet("hombres24.parquet")
