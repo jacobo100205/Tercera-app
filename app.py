@@ -1,5 +1,5 @@
 import pandas as pd 
-import geopandas as pgd
+import geopandas as gpd
 import matplotlib.pyplot as plt 
 import streamlit as st 
 
@@ -18,8 +18,7 @@ else:
     df_f = gpd.read_parquet("mujeres22.parquet")
 
 
-df_m = pgd.read_file('hombres.geojson')
-df_f = pgd.read_file('mujeres.geojson')
+
 
 fig, ax = plt.subplots(1, 2, figsize=(10, 4))
 df_m.plot(column='FT', ax=ax[0], legend=True, vmin = 0.2, vmax=1)
